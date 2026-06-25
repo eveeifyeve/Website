@@ -144,6 +144,12 @@
 			"skillIcon": "dart",
 			"color": ""
 		}
+		{
+  			"skillName": "",
+  			"experience": "",
+  			"skillIcon": "elm",
+			"color": ""
+		}
 	],
 	"tools": [
 		{
