@@ -5,11 +5,11 @@ const { Errorcode, Message } = Astro.props.frontmatter || Astro.props;
 ---
 <body class="bg-[#151515] w-screen h-screen">
   <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#2a2e2e_1px,transparent_1px)] bg-[size:14px_24px]">
-    <div class="absolute left-1/4 top-1/4 -z-5 m-auto h-3/6 w-1/2 rounded-full bg-gradient-to-r from-red-900 to-orange-900 opacity-50 blur-[120px]">
+    <div class="absolute left-1/4 top-1/4 -z-5 m-auto h-3/6 w-1/2 rounded-full bg-linear-to-r from-red-900 to-orange-900 opacity-50 blur-[120px]">
     </div>
   </div>
   <div class="error flex flex-col justify-center align-middle h-full w-full items-center space-x-2">
-    <h1 class="text-5xl font-medium from-stone-700 to-orange-800 opacity-60 blur-[150%] text-transparent bg-gradient-to-r bg-clip-text">
+    <h1 class="text-5xl font-medium from-stone-700 to-orange-800 opacity-60 blur-[150%] text-transparent bg-linear-to-r bg-clip-text">
       {Errorcode}
     </h1>
     <p class="text-gray-300 opacity-50">{Message}</p>
