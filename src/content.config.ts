@@ -1,5 +1,6 @@
 import { file } from "astro/loaders";
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
 
 type NixResource = {
 	name: string;
@@ -46,7 +47,9 @@ const nixResourcesCollection = defineCollection({
 	schema: z.object({
 		id: z.string(),
 		name: z.string(),
-		url: z.string().url(),
+		url: z.url({
+			protocol: /^https?$/
+		}),
 		key: z.string(),
 		other: z.boolean().optional(),
 	}),
